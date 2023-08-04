@@ -16,15 +16,14 @@ The operational amplifier (Op-Amp) is a key building block in many electronic ci
 
 These measurements are typically performed with specialized test equipment, such as oscilloscopes and signal generators. The exact procedure for measuring each parameter can vary depending on the particular Op-Amp and the test equipment being used.
 
-<b>Name of Developer | <b> Manas Verma
+<b>Name of Developer | <b> Dr. Ashutosh Tiwari
 :--|:--|
 <b> Institute | <b>  Rajkiya Engineering College Banda
-<b> Email id|     <b>  manasverma012345@gmail.com
-<b> Department |  Information Technology
-
+<b> Email id|     <b> ashutosh.tiwari@recbanda.ac.in
+<b> Department |  Applied Science and Humanity
 ### Contributors List
 
 SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
-1 | Dr. Ashutosh Tiwari | Faculty | Applied Science and Humanity | Rajkiya Engineering College Banda | ashutosh.tiwari@recbanda.ac.in
+1 | Manas Verma | Student | Information Technology| Rajkiya Engineering College Banda |manasverma012345@gmail.com 
 2 | Rahul Pushpakar | Student | Mechanical Engineering | Rajkiya Engineering College Banda | rahulpushpker@gmail.com
