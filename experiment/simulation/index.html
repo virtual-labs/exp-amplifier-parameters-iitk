@@ -3,26 +3,28 @@
 <head>
 	<!-- Add CSS at the head of HTML file -->
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js"></script>
 </head>
-<body>
+
 <body>
     <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <ul id="lists">
-          <h2>Procedure to Perform the Hall Effect</h2>
-          <li>Step 1: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro fuga, voluptatibus a quisquam optio eos nemo dolores doloremque accusantium eaque iure? Qui ab voluptatum quis modi assumenda, porro repellendus tempora?</li>
-          <li>Step 2: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet nisi minima, totam laborum cupiditate facilis dolor iure unde incidunt ad voluptate vero est. Aliquam officiis dignissimos, dicta numquam consectetur totam!</li>
-          <li>Step 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus asperiores accusantium voluptatem sint aspernatur molestias dolore voluptate doloremque consectetur. Accusantium totam, quas commodi ipsa voluptatem dolore hic animi obcaecati. Reiciendis!</li>
-          <li>Step 4: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, commodi consectetur? Exercitationem rerum, fuga harum adipisci iure maxime reprehenderit blanditiis cum ratione dolores aut voluptate quibusdam eum totam in. Et?</li>
+            <h2>Procedure to Perform the Experiment</h2>
+            <li>Step 1: Select the Mode form the available options.</li>
+            <li>Step 2: Follow the instructions in the alert box and select the input voltage.</li>
+            <li>Step 3: Turn on the required switches and press on Calculate v_out.</li>
+            <li>Step 4: Note the readings in the table given below.</li>
+            <li>Step 5: For CMRR mode click on CMRR button to get the ratio in the output box and note down the values in the table given below.</li>
+            <li>Step 6: For Slew_rate mode click on the slew_rate button to get the output in the box and then note down the values in the table below.</li>
         </ul>
-      </div>
-      <button class="openbtn" onclick="openNav()">☰ Open Procedure</button>
-      <button id="buto" onclick="tryb()">lo bhai </button>
+    </div>
+    <button class="openbtn" onclick="openNav()">☰ Open Procedure</button>
     <div class="btn-group">
-        <button class="button" id ="CommonMode" onclick="alertfunc(this.id)">Common Mode</button>
-        <button class="button" id ="DifferentialMode"onclick="alertfunc(this.id)">Differential Mode</button>
-        <button class="button" id ="CMRR"onclick="alertfunc(this.id)">CMRR</button>
-        <button class="button" id ="SlewRate"onclick="alertfunc(this.id)">Slew Rate</button>
+        <button class="button" id="CommonMode" onclick="alertfunc(this.id)">Common Mode</button>
+        <button class="button" id="DifferentialMode" onclick="alertfunc(this.id)">Differential Mode</button>
+        <button class="button" id="CMRR" onclick="alertfunc(this.id)">CMRR</button>
+        <button class="button" id="SlewRate" onclick="alertfunc(this.id)">Slew Rate</button>
     </div>
     <div id="svgimg" class="svgclass">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -1666,7 +1668,7 @@
             <rect x="321.06" y="226.08" class="st22" width="32.23" height="10.09" />
             <text transform="matrix(1 0 0 1 334.0228 230.3388)" class="st24 st37">R4</text>
             <rect x="668.01" y="184.15" class="st22" width="68.79" height="33.71" />
-            <text transform="matrix(1 0 0 1 693.4229 194.0885)" class="st23 st24 st38" id="multi">0 V</text>
+            <text transform="matrix(1 0 0 1 683.4229 194.0885)" class="st23 st24 st38" id="multi">0 V</text>
             <g>
                 <line class="st10" x1="198.73" y1="198.45" x2="198.73" y2="207.73" />
                 <line class="st10" x1="194.12" y1="203.09" x2="203.05" y2="203.09" />
@@ -1747,7 +1749,7 @@
                     </div>
                 </div>
             </foreignObject>
-            <foreignObject x="380" y="470" width="150" height="100">
+            <foreignObject x="380" y="485" width="200" height="100">
                 <div xmlns="http://www.w3.org/1999/xhtml">
                     <div> <span style="margin-left:10px ;">V2 Input</span>
                         <input type="range" min="0" max="30" value="0" class="slider" id="voltage2"
@@ -1755,11 +1757,198 @@
                         <span id="voltage-2-display">0</span>
                     </div>
                 </div>
+            </foreignObject>
+            <foreignObject x="670" y="350" width="150" height="200">
+                <div xmlns="http://www.w3.org/1999/xhtml">
+                    <table class="table123" id="tab1">
+                        <tr>
+                            <td>R1</td>
+                            <td>100 Ω</td>
+                        </tr>
+                        <tr>
+                            <td>R2</td>
+                            <td id="change">22K Ω</td>
+                        </tr>
+                        <tr>
+                            <td>R3</td>
+                            <td>100 Ω</td>
+                        </tr>
+                        <tr>
+                            <td>R4</td>
+                            <td>100K Ω</td>
+                        </tr>
+                    </table>
+                </div>
+            </foreignObject>
+            <foreignObject x="130" y="485" width="150" height="100">
+                <div xmlns="http://www.w3.org/1999/xhtml">
+                    <button id="out_v" onclick="calculate(this.id)" style="cursor:pointer;">Calculate V_out</button>
+                </div>
+            </foreignObject>
 
-    </svg>
+            <foreignObject x="560" y="485" width="150" height="100">
+                <div xmlns="http://www.w3.org/1999/xhtml">
+                    <button id="rate_slew" onclick="calculate(this.id)" style="cursor:pointer; display:none;">Slew_rate</button>
+                </div>
+            </foreignObject>
+            <foreignObject x="500" y="345" width="150" height="100">
+                <div xmlns="http://www.w3.org/1999/xhtml">
+                    <button id="cmrr_ratio" onclick="calculate(this.id)" style="cursor:pointer; display:none;">CMRR</button>
+                </div>
+            </foreignObject>
 
 
+            <foreignObject x="555" y="438" width="150" height="40">
+                <div xmlns="http://www.w3.org/1999/xhtml">
+                    <div class="output-window">
+                        <span id="number-output">0</span>
+                      </div>
+                </div>
+            </foreignObject>
+        </svg>
+        <div id="outputsec">
+            <table class="table987" id="tab11" style="display:none;">
+                <tr>
+                    <th>Vin V1 (Volt)</th>
+                    <th>Vout (Volt)</th>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table class="table987" id="tab2" style="display:none;">
+                <tr>
+                    <th>Vin V1 (Volt)</th>
+                    <th>Vin V2 (Volt)</th>
+                    <th>Vout (Volt)</th>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table class="table987" id="tab3" style="display:none;">
+                <tr>
+                    <th>Vin V1 (Volt)</th>
+                    <th>Vin V2 (Volt)</th>
+                    <th>Vout (Volt)</th>
+                    <th>CMRR</th>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table class="table987" id="tab4" style="display:none;">
+                <tr>
+                    <th>Vin V1 (Volt)</th>
+                    <th>Vin V2 (Volt)</th>
+                    <th>Vout (Volt)</th>
+                    <th>Slew_Rate</th>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+            </table>
+        </div>
     </div>
-        <script src="./js/main.js"></script>
+
 </body>
 </html>
