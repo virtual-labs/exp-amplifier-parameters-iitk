@@ -1,1 +1,1 @@
-To Measure  Operational Amplifier Parameters : Common mode gain, Differential mode gain CMMR, Slew Rate
+Measurement of Operational Amplifier Parameters : Common mode gain, Differential mode gain CMMR, Slew Rate
