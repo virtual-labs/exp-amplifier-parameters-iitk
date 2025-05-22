@@ -20,8 +20,8 @@ A<sub>cm</sub> = V<sub>ocm</sub> / V<sub>cm</sub><br>
 <h3>Differential Mode Gain</h3>
 Instead of applying superposition theorem with V<sub>1</sub> and V<sub>2</sub> separately, a better way is to first combine V<sub>1</sub> and V<sub>2</sub> in a different format, viz. (V<sub>1</sub> - V<sub>2</sub>). This is known as the differential mode input - V<sub>d</sub>. <br><br>
 Differential mode component: V<sub>d</sub> = (V<sub>1</sub> - V<sub>2</sub>)<br><br>
-Gain = V<sub>OUT</sub> / (V<sub>1</sub> - V<sub>2</sub>)<br><br>
-Gain = V<sub>OUT</sub> / V<sub>d</sub>  <br><br>
+Gain = V<sub style="font-size:0.4rem;">OUT</sub> / (V<sub>1</sub> - V<sub>2</sub>)<br><br>
+Gain = V<sub style="font-size:0.4rem;">OUT</sub> / V<sub>d</sub>  <br><br>
 
 This gain is known as the Differential Gain (A<sub>d</sub>) as it is based on the differential input alone.<br>
 
@@ -46,6 +46,6 @@ SR  =  dV<sub>o</sub>/dt |<sub>max</sub> V/µs<br><br>
 But, Slew rate:<br><br>
 
 Put max value of Cos ωt in the equation:<br><br>
-SR = V<sub>m</sub> ω (ω = 2πf)<br><br>
-SR = V<sub>m</sub> 2πf V/sec<br><br>
+SR = V<sub>m</sub> ω  &nbsp;&nbsp; Where  (ω = 2πf)<br><br>
+SR = V<sub>m</sub> 2πf<br><br>
 Slew rate indicates how rapidly the output of an op-amp can change in response to changes in the input frequency.
