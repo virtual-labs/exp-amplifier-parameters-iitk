@@ -27,5 +27,5 @@ SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
 1 | Manas Verma | Student | Information Technology| Rajkiya Engineering College Banda |manasverma012345@gmail.com 
 2 | Rahul Pushpakar | Student | Mechanical Engineering | Rajkiya Engineering College Banda | rahulpushpker@gmail.com
-3 | Ravi Kumar | Student | Mechanical Engineering | Rajkiya Engineering College Banda | 2307340130042@recbanda.ac.in
-4 | Nitish Yadav| Student | Mechanical Engineering | Rajkiya Engineering College Banda | 
+3 | Ravi Kumar | Student | Information Technology | Rajkiya Engineering College Banda | 2307340130042@recbanda.ac.in
+4 | Nitish Yadav| Student | Information Technology | Rajkiya Engineering College Banda | 2307340130031@recbanda.ac.in
